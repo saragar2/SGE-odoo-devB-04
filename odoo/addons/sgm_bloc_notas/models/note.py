@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 
 
 class SharedNote(models.Model):
-    _name = 'sgm.note'
+    _name = 'sgm_bloc_notas.note'
     _description = 'Nota compartida'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
@@ -32,17 +32,17 @@ class SharedNote(models.Model):
     )
 
     category_id = fields.Many2one(
-        comodel_name='sgm.category',
+        comodel_name='sgm_bloc_notas.category',
         string='Categoría'
     )
 
     tag_ids = fields.Many2many(
-        comodel_name='sgm.tag',
+        comodel_name='sgm_bloc_notas.tag',
         string='Etiquetas'
     )
 
     line_ids = fields.One2many(
-        comodel_name='sgm.note_line',
+        comodel_name='sgm_bloc_notas.note_line',
         inverse_name='note_id',
         string='Líneas de la nota'
     )

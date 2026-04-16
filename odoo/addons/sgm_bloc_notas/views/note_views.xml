@@ -3,8 +3,8 @@
 
     <!-- Vista Tree -->
     <record id="sgm_view_note_tree" model="ir.ui.view">
-        <field name="name">sgm.note.tree</field>
-        <field name="model">sgm.note</field>
+        <field name="name">sgm_bloc_notas.note.tree</field>
+        <field name="model">sgm_bloc_notas.note</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -18,8 +18,8 @@
 
     <!-- Vista Form -->
     <record id="sgm_view_note_form" model="ir.ui.view">
-        <field name="name">sgm.note.form</field>
-        <field name="model">sgm.note</field>
+        <field name="name">sgm_bloc_notas.note.form</field>
+        <field name="model">sgm_bloc_notas.note</field>
         <field name="arch" type="xml">
             <form string="Nota compartida">
                 <sheet>

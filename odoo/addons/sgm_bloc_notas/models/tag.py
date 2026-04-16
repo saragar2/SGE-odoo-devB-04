@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class SharedNoteTag(models.Model):
-    _name = 'sgm.tag'
+    _name = 'sgm_bloc_notas.tag'
     _description = 'Etiqueta de nota'
 
     name = fields.Char(
@@ -15,6 +15,6 @@ class SharedNoteTag(models.Model):
     )
 
     note_ids = fields.Many2many(
-        comodel_name='sgm.note',
+        comodel_name='sgm_bloc_notas.note',
         string='Notas'
     )

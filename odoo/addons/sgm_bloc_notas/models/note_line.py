@@ -2,11 +2,11 @@ from odoo import models, fields
 
 
 class SharedNoteLine(models.Model):
-    _name = 'sgm.note_line'
+    _name = 'sgm_bloc_notas.note_line'
     _description = 'Línea de nota'
 
     note_id = fields.Many2one(
-        comodel_name='sgm.note',
+        comodel_name='sgm_bloc_notas.note',
         string='Nota',
         required=True,
         ondelete='cascade'

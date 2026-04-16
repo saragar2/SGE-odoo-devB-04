@@ -2,8 +2,8 @@
 <odoo>
 
     <record id="sgm_view_tag_tree" model="ir.ui.view">
-        <field name="name">sgm.tag.tree</field>
-        <field name="model">sgm.tag</field>
+        <field name="name">sgm_bloc_notas.tag.tree</field>
+        <field name="model">sgm_bloc_notas.tag</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -13,8 +13,8 @@
     </record>
 
     <record id="sgm_view_tag_form" model="ir.ui.view">
-        <field name="name">sgm.tag.form</field>
-        <field name="model">sgm.tag</field>
+        <field name="name">sgm_bloc_notas.tag.form</field>
+        <field name="model">sgm_bloc_notas.tag</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>

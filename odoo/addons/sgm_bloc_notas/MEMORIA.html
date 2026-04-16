@@ -245,7 +245,7 @@
 └─────────────────────────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────┐              ┌─────────────────────────┐
-│      sgm.category       │              │        sgm.tag          │
+│      sgm_bloc_notas.category       │              │        sgm_bloc_notas.tag          │
 ├─────────────────────────┤              ├─────────────────────────┤
 │ - name: Char [required] │              │ - name: Char [required] │
 │ - description: Text     │              │ - color: Integer        │
@@ -256,15 +256,15 @@
             │                                        │
             ▼ *                                      ▼ *
 ┌─────────────────────────────────────────────────────────────────┐
-│                           sgm.note                               │
+│                           sgm_bloc_notas.note                               │
 ├─────────────────────────────────────────────────────────────────┤
 │ - name: Char [required]                                          │
 │ - content: Html                                                  │
 │ - image: Image                                                   │
 │ - owner_id: Many2one → res.users [required]                      │
-│ - category_id: Many2one → sgm.category                           │
-│ - tag_ids: Many2many → sgm.tag                                   │
-│ - line_ids: One2many → sgm.note_line                             │
+│ - category_id: Many2one → sgm_bloc_notas.category                           │
+│ - tag_ids: Many2many → sgm_bloc_notas.tag                                   │
+│ - line_ids: One2many → sgm_bloc_notas.note_line                             │
 │ - is_public: Boolean                                             │
 │ - last_update: Datetime [computed]                               │
 ├─────────────────────────────────────────────────────────────────┤
@@ -276,7 +276,7 @@
                             │
                             ▼ *
               ┌─────────────────────────────┐
-              │       sgm.note_line         │
+              │       sgm_bloc_notas.note_line         │
               ├─────────────────────────────┤
               │ - note_id: Many2one → note  │
               │   [required, cascade]       │
@@ -299,22 +299,22 @@
         <tbody>
             <tr>
                 <td><strong>Note</strong></td>
-                <td>sgm.note</td>
+                <td>sgm_bloc_notas.note</td>
                 <td>Modelo principal que representa una nota compartida. Hereda de <code>mail.thread</code> y <code>mail.activity.mixin</code> para soporte de mensajería y actividades.</td>
             </tr>
             <tr>
                 <td><strong>NoteLine</strong></td>
-                <td>sgm.note_line</td>
+                <td>sgm_bloc_notas.note_line</td>
                 <td>Líneas o ítems dentro de una nota, funcionando como lista de tareas con estado de completado.</td>
             </tr>
             <tr>
                 <td><strong>Category</strong></td>
-                <td>sgm.category</td>
+                <td>sgm_bloc_notas.category</td>
                 <td>Categorías para organizar y clasificar las notas.</td>
             </tr>
             <tr>
                 <td><strong>Tag</strong></td>
-                <td>sgm.tag</td>
+                <td>sgm_bloc_notas.tag</td>
                 <td>Etiquetas con colores para clasificar las notas de forma visual.</td>
             </tr>
         </tbody>
@@ -333,27 +333,27 @@
         </thead>
         <tbody>
             <tr>
-                <td>sgm.category</td>
+                <td>sgm_bloc_notas.category</td>
                 <td>One2many (1:N)</td>
-                <td>sgm.note</td>
+                <td>sgm_bloc_notas.note</td>
                 <td>Una categoría puede contener múltiples notas</td>
             </tr>
             <tr>
-                <td>sgm.note</td>
+                <td>sgm_bloc_notas.note</td>
                 <td>Many2one (N:1)</td>
                 <td>res.users</td>
                 <td>Cada nota tiene un único propietario</td>
             </tr>
             <tr>
-                <td>sgm.note</td>
+                <td>sgm_bloc_notas.note</td>
                 <td>Many2many (N:M)</td>
-                <td>sgm.tag</td>
+                <td>sgm_bloc_notas.tag</td>
                 <td>Las notas pueden tener múltiples etiquetas y viceversa</td>
             </tr>
             <tr>
-                <td>sgm.note</td>
+                <td>sgm_bloc_notas.note</td>
                 <td>One2many (1:N)</td>
-                <td>sgm.note_line</td>
+                <td>sgm_bloc_notas.note_line</td>
                 <td>Una nota puede contener múltiples líneas/tareas</td>
             </tr>
         </tbody>

@@ -4,21 +4,21 @@
     <!-- Acción Notas -->
     <record id="sgm_action_note" model="ir.actions.act_window">
         <field name="name">Notas</field>
-        <field name="res_model">sgm.note</field>
+        <field name="res_model">sgm_bloc_notas.note</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Acción Categorías -->
     <record id="sgm_action_category" model="ir.actions.act_window">
         <field name="name">Categorías</field>
-        <field name="res_model">sgm.category</field>
+        <field name="res_model">sgm_bloc_notas.category</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Acción Etiquetas -->
     <record id="sgm_action_tag" model="ir.actions.act_window">
         <field name="name">Etiquetas</field>
-        <field name="res_model">sgm.tag</field>
+        <field name="res_model">sgm_bloc_notas.tag</field>
         <field name="view_mode">tree,form</field>
     </record>
 
