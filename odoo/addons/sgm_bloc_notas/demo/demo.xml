@@ -16,7 +16,7 @@
             <field name="description">Apuntes y notas de estudio</field>
         </record>
 
-        <!-- Tags -->
+        <!-- Etiquetas -->
         <record id="sgm_tag_urgente" model="sgm_bloc_notas.tag">
             <field name="name">Urgente</field>
             <field name="color">1</field>
