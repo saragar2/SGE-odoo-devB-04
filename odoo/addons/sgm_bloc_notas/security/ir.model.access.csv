@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-sgm_access_note_user,sgm_access_note_user,model_sgm_note,base.group_user,1,1,1,0
-sgm_access_note_admin,sgm_access_note_admin,model_sgm_note,base.group_system,1,1,1,1
-sgm_access_note_line_user,sgm_access_note_line_user,model_sgm_note_line,base.group_user,1,1,1,0
-sgm_access_note_line_admin,sgm_access_note_line_admin,model_sgm_note_line,base.group_system,1,1,1,1
-sgm_access_category_user,sgm_access_category_user,model_sgm_category,base.group_user,1,1,1,0
-sgm_access_category_admin,sgm_access_category_admin,model_sgm_category,base.group_system,1,1,1,1
-sgm_access_tag_user,sgm_access_tag_user,model_sgm_tag,base.group_user,1,1,1,0
-sgm_access_tag_admin,sgm_access_tag_admin,model_sgm_tag,base.group_system,1,1,1,1
+sgm_access_note_user,sgm_access_note_user,model_sgm_bloc_notas_note,base.group_user,1,1,1,0
+sgm_access_note_admin,sgm_access_note_admin,model_sgm_bloc_notas_note,base.group_system,1,1,1,1
+sgm_access_note_line_user,sgm_access_note_line_user,model_sgm_bloc_notas_note_line,base.group_user,1,1,1,0
+sgm_access_note_line_admin,sgm_access_note_line_admin,model_sgm_bloc_notas_note_line,base.group_system,1,1,1,1
+sgm_access_category_user,sgm_access_category_user,model_sgm_bloc_notas_category,base.group_user,1,1,1,0
+sgm_access_category_admin,sgm_access_category_admin,model_sgm_bloc_notas_category,base.group_system,1,1,1,1
+sgm_access_tag_user,sgm_access_tag_user,model_sgm_bloc_notas_tag,base.group_user,1,1,1,0
+sgm_access_tag_admin,sgm_access_tag_admin,model_sgm_bloc_notas_tag,base.group_system,1,1,1,1
