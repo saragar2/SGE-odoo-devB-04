@@ -16,5 +16,8 @@ class SharedNoteTag(models.Model):
 
     note_ids = fields.Many2many(
         comodel_name='sgm_bloc_notas.note',
+        relation='sgm_bloc_notas_note_tag_rel',
+        column1='tag_id',
+        column2='note_id',
         string='Notas'
     )

@@ -1,5 +1,3 @@
-from odoo import models, fields
-
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
@@ -38,6 +36,9 @@ class SharedNote(models.Model):
 
     tag_ids = fields.Many2many(
         comodel_name='sgm_bloc_notas.tag',
+        relation='sgm_bloc_notas_note_tag_rel',
+        column1='note_id',
+        column2='tag_id',
         string='Etiquetas'
     )
 
