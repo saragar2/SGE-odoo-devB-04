@@ -1,0 +1,115 @@
+<odoo>
+    <data>
+        <!-- Categorías -->
+        <record id="sgm_category_personal" model="sgm_bloc_notas.category">
+            <field name="name">Personal</field>
+            <field name="description">Notas personales y recordatorios</field>
+        </record>
+
+        <record id="sgm_category_trabajo" model="sgm_bloc_notas.category">
+            <field name="name">Trabajo</field>
+            <field name="description">Notas relacionadas con el trabajo</field>
+        </record>
+
+        <record id="sgm_category_estudios" model="sgm_bloc_notas.category">
+            <field name="name">Estudios</field>
+            <field name="description">Apuntes y notas de estudio</field>
+        </record>
+
+        <!-- Tags -->
+        <record id="sgm_tag_urgente" model="sgm_bloc_notas.tag">
+            <field name="name">Urgente</field>
+            <field name="color">1</field>
+        </record>
+
+        <record id="sgm_tag_importante" model="sgm_bloc_notas.tag">
+            <field name="name">Importante</field>
+            <field name="color">2</field>
+        </record>
+
+        <record id="sgm_tag_pendiente" model="sgm_bloc_notas.tag">
+            <field name="name">Pendiente</field>
+            <field name="color">3</field>
+        </record>
+
+        <record id="sgm_tag_completado" model="sgm_bloc_notas.tag">
+            <field name="name">Completado</field>
+            <field name="color">4</field>
+        </record>
+
+        <!-- Notas -->
+        <record id="sgm_note_lista_compras" model="sgm_bloc_notas.note">
+            <field name="name">Lista de la compra</field>
+            <field name="content">&lt;p&gt;Cosas que necesito comprar esta semana&lt;/p&gt;</field>
+            <field name="category_id" ref="sgm_category_personal"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('sgm_tag_pendiente')])]"/>
+            <field name="is_public">False</field>
+        </record>
+
+        <record id="sgm_note_reunion" model="sgm_bloc_notas.note">
+            <field name="name">Reunión de equipo</field>
+            <field name="content">&lt;p&gt;Puntos a tratar en la próxima reunión&lt;/p&gt;</field>
+            <field name="category_id" ref="sgm_category_trabajo"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('sgm_tag_urgente'), ref('sgm_tag_importante')])]"/>
+            <field name="is_public">True</field>
+        </record>
+
+        <record id="sgm_note_apuntes_python" model="sgm_bloc_notas.note">
+            <field name="name">Apuntes de Python</field>
+            <field name="content">&lt;p&gt;Conceptos básicos de programación en Python&lt;/p&gt;</field>
+            <field name="category_id" ref="sgm_category_estudios"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('sgm_tag_importante')])]"/>
+            <field name="is_public">True</field>
+        </record>
+
+        <!-- Líneas de notas -->
+        <record id="sgm_line_leche" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_lista_compras"/>
+            <field name="title">Leche</field>
+            <field name="description">2 litros de leche semidesnatada</field>
+            <field name="done">False</field>
+        </record>
+
+        <record id="sgm_line_pan" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_lista_compras"/>
+            <field name="title">Pan</field>
+            <field name="description">Barra de pan integral</field>
+            <field name="done">True</field>
+        </record>
+
+        <record id="sgm_line_frutas" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_lista_compras"/>
+            <field name="title">Frutas</field>
+            <field name="description">Manzanas y plátanos</field>
+            <field name="done">False</field>
+        </record>
+
+        <record id="sgm_line_revision_proyecto" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_reunion"/>
+            <field name="title">Revisión del proyecto</field>
+            <field name="description">Estado actual del desarrollo</field>
+            <field name="done">False</field>
+        </record>
+
+        <record id="sgm_line_planificacion" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_reunion"/>
+            <field name="title">Planificación sprint</field>
+            <field name="description">Definir tareas para el próximo sprint</field>
+            <field name="done">False</field>
+        </record>
+
+        <record id="sgm_line_print" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_apuntes_python"/>
+            <field name="title">Print("Texto")</field>
+            <field name="description">Muestra por pantalla el texto pasado como parámetro</field>
+            <field name="done">False</field>
+        </record>
+
+        <record id="sgm_line_input" model="sgm_bloc_notas.note_line">
+            <field name="note_id" ref="sgm_note_apuntes_python"/>
+            <field name="title">Input("Texto")</field>
+            <field name="description">Muestra por pantalla el texto pasado como parámetro y captura la respuesta que se pase por terminal</field>
+            <field name="done">False</field>
+        </record>
+    </data>
+</odoo>

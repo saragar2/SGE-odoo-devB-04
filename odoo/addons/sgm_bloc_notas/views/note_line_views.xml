@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sgm_view_note_line_tree" model="ir.ui.view">
+        <field name="name">sgm_bloc_notas.note_line.tree</field>
+        <field name="model">sgm_bloc_notas.note_line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="note_id"/>
+                <field name="title"/>
+                <field name="done"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sgm_view_note_line_form" model="ir.ui.view">
+        <field name="name">sgm_bloc_notas.note_line.form</field>
+        <field name="model">sgm_bloc_notas.note_line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="note_id"/>
+                        <field name="title"/>
+                        <field name="description"/>
+                        <field name="done"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
