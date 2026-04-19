@@ -25,8 +25,6 @@ Una página en la que podrás escribir notas de manera sencilla y elegir si comp
     'data': [
         'security/ir.model.access.csv',
     	'views/menu.xml',
-        'views/views.xml',
-        'views/templates.xml',
 		'views/note_views.xml',
 		'views/note_line_views.xml',
 		'views/category_views.xml',
