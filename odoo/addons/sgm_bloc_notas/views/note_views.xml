@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <!-- Vista Tree -->
+    <!-- Vista de lista -->
     <record id="sgm_view_note_tree" model="ir.ui.view">
         <field name="name">sgm_bloc_notas.note.tree</field>
         <field name="model">sgm_bloc_notas.note</field>
@@ -16,7 +16,7 @@
         </field>
     </record>
 
-    <!-- Vista Form -->
+    <!-- Vista de formulario -->
     <record id="sgm_view_note_form" model="ir.ui.view">
         <field name="name">sgm_bloc_notas.note.form</field>
         <field name="model">sgm_bloc_notas.note</field>
@@ -65,7 +65,7 @@
 
                 </sheet>
 
-                <!-- Chatter -->
+                <!-- Seguimiento y actividades -->
                 <div class="oe_chatter">
                     <field name="message_follower_ids"/>
                     <field name="activity_ids"/>
