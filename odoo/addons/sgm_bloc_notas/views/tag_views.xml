@@ -21,6 +21,7 @@
                     <group>
                         <field name="name"/>
                         <field name="color"/>
+                        <field name="note_ids" widget="many2many_tags"/>
                     </group>
                 </sheet>
             </form>
