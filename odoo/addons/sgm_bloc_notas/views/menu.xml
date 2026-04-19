@@ -8,6 +8,13 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- Acción Líneas de nota -->
+    <record id="sgm_action_note_line" model="ir.actions.act_window">
+        <field name="name">Líneas de nota</field>
+        <field name="res_model">sgm_bloc_notas.note_line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <!-- Acción Categorías -->
     <record id="sgm_action_category" model="ir.actions.act_window">
         <field name="name">Categorías</field>
@@ -39,6 +46,12 @@
               parent="sgm_menu_root"
               action="sgm_action_category"
               sequence="20"/>
+
+    <menuitem id="sgm_menu_note_line"
+              name="Líneas de nota"
+              parent="sgm_menu_root"
+              action="sgm_action_note_line"
+              sequence="25"/>
 
     <menuitem id="sgm_menu_tag"
               name="Etiquetas"

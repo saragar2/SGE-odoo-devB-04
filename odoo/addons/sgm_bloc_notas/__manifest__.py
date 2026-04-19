@@ -10,6 +10,7 @@ Una página en la que podrás escribir notas de manera sencilla y elegir si comp
 
     'author': "Sara García Miguel",
     'website': "https://github.com/saragar2",
+    'license': 'LGPL-3',
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
