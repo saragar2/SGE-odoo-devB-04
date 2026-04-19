@@ -2,61 +2,61 @@
 <odoo>
 
     <!-- Acción Notas -->
-    <record id="sgm_action_note" model="ir.actions.act_window">
+    <record id="sgm_bloc_notas_action_note" model="ir.actions.act_window">
         <field name="name">Notas</field>
         <field name="res_model">sgm_bloc_notas.note</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Acción Líneas de nota -->
-    <record id="sgm_action_note_line" model="ir.actions.act_window">
+    <record id="sgm_bloc_notas_action_note_line" model="ir.actions.act_window">
         <field name="name">Líneas de nota</field>
         <field name="res_model">sgm_bloc_notas.note_line</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Acción Categorías -->
-    <record id="sgm_action_category" model="ir.actions.act_window">
+    <record id="sgm_bloc_notas_action_category" model="ir.actions.act_window">
         <field name="name">Categorías</field>
         <field name="res_model">sgm_bloc_notas.category</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Acción Etiquetas -->
-    <record id="sgm_action_tag" model="ir.actions.act_window">
+    <record id="sgm_bloc_notas_action_tag" model="ir.actions.act_window">
         <field name="name">Etiquetas</field>
         <field name="res_model">sgm_bloc_notas.tag</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Menú raíz -->
-    <menuitem id="sgm_menu_root"
+    <menuitem id="sgm_bloc_notas_menu_root"
               name="Notas compartidas"
               sequence="10"/>
 
     <!-- Submenús -->
-    <menuitem id="sgm_menu_note"
+    <menuitem id="sgm_bloc_notas_menu_note"
               name="Notas"
-              parent="sgm_menu_root"
-              action="sgm_action_note"
+              parent="sgm_bloc_notas_menu_root"
+              action="sgm_bloc_notas_action_note"
               sequence="10"/>
 
-    <menuitem id="sgm_menu_category"
+    <menuitem id="sgm_bloc_notas_menu_category"
               name="Categorías"
-              parent="sgm_menu_root"
-              action="sgm_action_category"
+              parent="sgm_bloc_notas_menu_root"
+              action="sgm_bloc_notas_action_category"
               sequence="20"/>
 
-    <menuitem id="sgm_menu_note_line"
+    <menuitem id="sgm_bloc_notas_menu_note_line"
               name="Líneas de nota"
-              parent="sgm_menu_root"
-              action="sgm_action_note_line"
+              parent="sgm_bloc_notas_menu_root"
+              action="sgm_bloc_notas_action_note_line"
               sequence="25"/>
 
-    <menuitem id="sgm_menu_tag"
+    <menuitem id="sgm_bloc_notas_menu_tag"
               name="Etiquetas"
-              parent="sgm_menu_root"
-              action="sgm_action_tag"
+              parent="sgm_bloc_notas_menu_root"
+              action="sgm_bloc_notas_action_tag"
               sequence="30"/>
 
 </odoo>

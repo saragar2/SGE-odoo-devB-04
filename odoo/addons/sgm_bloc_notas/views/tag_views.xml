@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="sgm_view_tag_tree" model="ir.ui.view">
+    <record id="sgm_bloc_notas_view_tag_tree" model="ir.ui.view">
         <field name="name">sgm_bloc_notas.tag.tree</field>
         <field name="model">sgm_bloc_notas.tag</field>
         <field name="arch" type="xml">
@@ -12,7 +12,7 @@
         </field>
     </record>
 
-    <record id="sgm_view_tag_form" model="ir.ui.view">
+    <record id="sgm_bloc_notas_view_tag_form" model="ir.ui.view">
         <field name="name">sgm_bloc_notas.tag.form</field>
         <field name="model">sgm_bloc_notas.tag</field>
         <field name="arch" type="xml">

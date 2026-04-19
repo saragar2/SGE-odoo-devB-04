@@ -2,7 +2,7 @@
 {
     'name': "sgm_bloc_notas",
 
-    'summary': "Take your own notes and share them",
+    'summary': "Toma tus propias notas y comprártelas",
 
     'description': """
 Una página en la que podrás escribir notas de manera sencilla y elegir si compartirlas y con quién.
